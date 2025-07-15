@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Item A",
+        "description": "Description for item A",
+        "heroStatAffected": "health",
+        "expression": "health + 10"
+    },
+    {
+        "name": "Item B",
+        "description": "Description for item B",
+        "heroStatAffected": "defense",
+        "expression": "evasion / 2"
+    }
+]

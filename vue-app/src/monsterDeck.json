@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Monster A",
+        "description": "Description for Monster A",
+        "portraitURL": "https://c.tenor.com/FGe6BbPT3xYAAAAC/tenor.gif",
+        "actions": [
+            {
+                "actionName": "Attack",
+                "description": "Monster A lunges at our hero, dealing a random amount of damage",
+                "heroStatAffected": "health",
+                "expression": "health - randomInt(5, 20)"
+            }
+        ]
+    },
+    {
+        "name": "Monster B",
+        "description": "Description for Monster B",
+        "portraitURL": "https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2022-10/221004-barney-dinosaur-al-1132-c8ea46.jpg",
+        "actions": [
+            {
+                "name": "Wreck armor",
+                "description": "Dissolves our hero's armor, reducing defense to zero",
+                "heroStatAffected": "defense",
+                "expression": "0"
+            },
+            {
+                "name": "Trip",
+                "description": "Cuts hero's evasion in half",
+                "heroStatAffected": "evasion",
+                "expression": "evasion / 2"
+            }
+        ]
+    }
+]

@@ -1,0 +1,9 @@
+{
+    "name": "Hero McHeroface",
+    "description": "Hero biography / character arc / tragic backstory goes here",
+    "portraitURL": "https://static.wikia.nocookie.net/heroes-and-villain/images/d/d7/Image_Lance_Slashblade.png",
+    "attack": 10,
+    "defense": 10,
+    "evasion": 10,
+    "health": 100
+}
