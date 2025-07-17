@@ -1,44 +1,75 @@
 <template>
   <div id="app">
+    <!-- Conditionally render components -->
+ 
     
-    
-    <!--Phase -->
-    <MapView 
-      v-if="phase === 'day'" 
-      :locations="mapData" 
-
-    />
-    <UI 
-      v-if="phase === 'day'"
+    <UI
+      v-if="situation === 'HomeScreen'"
       @craft="handleCraft"
-
+      @map="handleMapClick"
+      @base="handleBaseClick"
+      @production="handleProductionClick"
+      @next-phase="handleNextPhase"
     />
-    <WorldMap 
-    :base-position="basePosition" 
-    @drag = "HandleMapDrag"
+    
+    <WorldMap
+      :base-position="basePosition"
+      @drag="handleMapDrag"
     />
-    <!-- https://learnvue.co/articles/vue-drag-and-drop @drag-->
-
   </div>
 </template>
 
 <script>
+import UI from './UI.vue'
+import WorldMap from './WorldMap.vue'
+
 export default {
+  components: {
+    UI,
+    WorldMap
+  },
   data() {
     return {
-        
-      resources: { supplies: 20, fuel: 10, scrap: 15},
-      mapData: [ /* data */ ]
-    };
+      phase: 'day',
+      situation: 'HomeScreen', // Initialize situation
+      basePosition: { x: 0, y: 0 }, // Initialize basePosition
+      resources: { 
+        supplies: 20, 
+        fuel: 10, 
+        scrap: 15
+      },
+      mapData: [] // Your map data here
+    }
   },
   methods: {
-    handleTravel(coords) { /* Update position */ },
-    handleCraft(recipe) { /* Deduct resources */ },
-    handleDefense(action) {}
+    handleTravel(coords) {
+      // Update position logic
+    },
+    handleCraft(recipe) {
+      // Crafting logic
+    },
+    handleDefense(action) {
+      // Defense logic
+    },
+    handleMapClick() {
+      // Map button logic
+    },
+    handleBaseClick() {
+      // Base button logic
+    },
+    handleProductionClick() {
+      // Production button logic
+    },
+    handleNextPhase() {
+      // Next phase logic
+    },
+    handleMapDrag(event) {
+      // Map drag logic
+    }
   }
-};
+}
 </script>
 
-<sytle scoped>
-
-</sytle>
+<style scoped>
+/* Your styles here */
+</style>
