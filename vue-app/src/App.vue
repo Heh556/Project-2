@@ -36,7 +36,7 @@ export default {
   data() {
     return {
       phase: 'day',
-      situation: 'HomeScreen', // Initialize situation
+      currentScreen: 'HomeScreen', // Initialize situation
       basePosition: { x: 0, y: 0 }, // Initialize basePosition
       resources: { 
         supplies: 20, 
