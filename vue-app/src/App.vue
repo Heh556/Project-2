@@ -1,10 +1,8 @@
 <template>
   <div id="app">
-    <!-- Conditionally render components -->
- 
     
     <UI
-      v-if="situation === 'HomeScreen'"
+      v-if="currentScreen === 'HomeScreen'"
       @craft="handleCraft"
       @map="handleMapClick"
       @base="handleBaseClick"
@@ -15,13 +13,20 @@
     <WorldMap
       :base-position="basePosition"
       @drag="handleMapDrag"
+      
     />
+      
+          <!-- https://learnvue.co/articles/vue-drag-and-drop @drag-->
+     <Base v-if="currentScreen === 'base'" 
+        />
   </div>
+  
 </template>
 
 <script>
 import UI from './UI.vue'
 import WorldMap from './WorldMap.vue'
+import Base from './Base.vue'
 
 export default {
   components: {
@@ -38,7 +43,7 @@ export default {
         fuel: 10, 
         scrap: 15
       },
-      mapData: [] // Your map data here
+      mapData: [] 
     }
   },
   methods: {
@@ -71,5 +76,5 @@ export default {
 </script>
 
 <style scoped>
-/* Your styles here */
+
 </style>
